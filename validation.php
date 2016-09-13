@@ -6,6 +6,7 @@ session_start();
 if(	isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && 
 	!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['password'])) {
 
+
 	// TODO
 	$inscription = userRegistration($db, $_POST['username'], $_POST['email'], $_POST['password']);
 
