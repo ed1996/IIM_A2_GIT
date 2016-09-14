@@ -15,6 +15,7 @@ if( isset($_FILES['music']) && !empty($_FILES['music']) &&
 		if (preg_match('/\.(mp3|ogg)$/i', $file['name'])) {
 			$filename = md5(uniqid(rand(), true));
 			$destination = "musics/{$filename}.{$_SESSION['id']}.{$ext}";
+
 			$addmuzizi = addMusic($db,$_SESSION['id'], $_POST['title'], $file);
 			header('Location: dashboard.php');	
 		} else {
@@ -23,6 +24,8 @@ if( isset($_FILES['music']) && !empty($_FILES['music']) &&
 	 }
 
 
+
 include 'view/_header.php';
 include 'view/add_music.php';
 include 'view/_footer.php';
+?>
