@@ -3,6 +3,7 @@ session_start();
 require('config/config.php');
 require('model/functions.fn.php');
 
+
 if( isset($_FILES['music']) && !empty($_FILES['music']) && 
 	isset($_POST['title']) && !empty($_POST['title'])){
 	
@@ -14,14 +15,13 @@ if( isset($_FILES['music']) && !empty($_FILES['music']) &&
 		if (preg_match('/\.(mp3|ogg)$/i', $file['name'])) {
 			$filename = md5(uniqid(rand(), true));
 			$destination = "musics/{$filename}.{$_SESSION['id']}.{$ext}";
-
-			// TODO
-
+			$addmuzizi = addMusic($db,$_SESSION['id'], $_POST['title'], $file);
+			header('Location: dashboard.php');	
 		} else {
 			$error = 'Erreur, le fichier n\'a pas une extension autorisée !';
 		}
-	// }
-}
+	 }
+
 
 include 'view/_header.php';
 include 'view/add_music.php';
