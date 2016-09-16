@@ -30,6 +30,8 @@
 								}
 								?>
 
+								<!-- Commentaire en HTML afin de push -->
+
 								<b class="username"><?php echo $_SESSION['username']; ?></b>
 								<p>
 									<br>

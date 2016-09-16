@@ -2,9 +2,6 @@
 session_start();
 require('config/config.php');
 require('model/functions.fn.php');
-var_dump($_SESSION);
-var_dump($_POST);
-var_dump($_FILES);
 if( isset($_FILES['music']) && !empty($_FILES['music']) && 
 	isset($_POST['title']) && !empty($_POST['title'])){
 	
@@ -21,7 +18,7 @@ if( isset($_FILES['music']) && !empty($_FILES['music']) &&
 				addMusic($db,$_SESSION['id'],$_POST['title'],$destination);
 
 			}else
-				$error = 'Erreur, une erreur est survenue pendant l\'ajout de la vidéo !';
+				$error = 'Erreur, une erreur est survenue pendant l\'ajout de la musique !';
 		} else {
 			$error = 'Erreur, le fichier n\'a pas une extension autorisée !';
 		}
