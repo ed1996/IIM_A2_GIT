@@ -8,7 +8,7 @@ if(	isset($_POST['username']) && isset($_POST['email']) && isset($_POST['passwor
 
 
 
-	// TODO
+	
 	$inscription = userRegistration($db, $_POST['username'], $_POST['email'], $_POST['password']);
 
 	header('Location: login.php');

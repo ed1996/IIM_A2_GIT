@@ -5,11 +5,14 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div id="musicfeed">
 					<h1><i class="fa fa-clock-o"></i> Sound Feed</h1>
+
 					<?php foreach($musics as $music){ ?>
+
 						<div class="music animated fadeInDown" data-src="<?php echo $music['file']; ?>">
 							<div class="row">
 								<div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
 									<div class="author">
+
 										<?php 
 											$sql = "SELECT picture FROM users WHERE id = :id LIMIT 1";
 											$req = $db->prepare($sql);
@@ -24,6 +27,7 @@
 												echo '<img src="view/profil_pic/undefined.jpg" alt=""></a>';
 											}
 										?>
+										
 									</div>
 								</div>
 								<div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">

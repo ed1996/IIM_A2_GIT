@@ -8,6 +8,7 @@
 					<div class="block animated fadeInDown">
 						<div class="row">
 							<div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
+
 								<?php
 								if(isset($error) && !empty($error)){
 									echo '
@@ -17,6 +18,7 @@
 									</div>';
 								}
 								?>
+								
 								<form action="add_music.php" method="POST" enctype="multipart/form-data">
 									<div class="form-group">
 										<label for="title">Titre</label>
