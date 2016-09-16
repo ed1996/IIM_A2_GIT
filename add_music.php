@@ -3,7 +3,6 @@ session_start();
 require('config/config.php');
 require('model/functions.fn.php');
 
-
 if( isset($_FILES['music']) && !empty($_FILES['music']) && 
 	isset($_POST['title']) && !empty($_POST['title'])){
 	
